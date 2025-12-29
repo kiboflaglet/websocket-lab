@@ -9,7 +9,7 @@ const httpServer = createServer(app)
 
 initSocket(httpServer)
 
-const PORT = process.env.PORT
+const PORT = Number(process.env.PORT) || 3000
 
 httpServer.listen(PORT, () => {
     console.log(`app runs in http://localhost:${PORT}`)
